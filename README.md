@@ -41,6 +41,7 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
 ```bash
 groupadd marketing
+
 useradd -m alice_m
 useradd -m bob_m
 useradd -m carol_m
