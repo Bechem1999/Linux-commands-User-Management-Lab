@@ -18,6 +18,13 @@ The objective of this lab was to simulate real-world enterprise user management 
 - Verifying system configurations
   ---
 
+## Tools used
+
+-Kali Linux
+-Linux Terminal
+-GitHub
+-Virtual Machine (VMware)
+
 ## Scenario Overview
 
 As a System Administrator at TechCorp Solutions, I was required to:
@@ -30,14 +37,37 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
 ### Tasks Performed
 
-- Created marketing group
+-Created marketing group
 - Created 5 users
 - Added users to group
 - Created individual report files
 - Assigned file ownership
 - Applied 700 permissions
 
-### Commands Executed
+## Step by step process
+
+  
+
+## PART 2: IT Department (Shared Access)
+Tasks Performed
+Created itdept group
+Created 5 IT users
+Added users to group
+Created shared project file
+Assigned group ownership
+Applied 770 permissions 
+
+## Key Observations/ Lesson Learned
+
+-700 allows access only to the file owner.
+-770 allows access to both owner and group members.
+-Group-based access control simplifies enterprise management.
+-Proper permission management reduces unauthorized access risks.
+-Linux enforces access control using owner, group, and others model.
+
+
+
+### Commands Executed 
 
 ```bash
 groupadd marketing
@@ -59,5 +89,6 @@ touch /home/shared/marketing/*.txt
 chown user /home/shared/marketing/file
 chmod 700 /home/shared/marketing/*.txt
 
-### Expected Permission Output
+Expected Permission Output
+
 -rwx-----
