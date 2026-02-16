@@ -60,3 +60,4 @@ chmod 700 /home/shared/marketing/*.txt
 
 ### Expected Permission Output
 -rwx-----
+
