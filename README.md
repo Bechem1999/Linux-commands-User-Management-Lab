@@ -15,7 +15,8 @@ The objective of this lab was to simulate real-world enterprise user management 
 - Managing file ownership
 - Implementing secure file permissions
 - Applying the Principle of Least Privilege
-- Verifying system configurations
+- verifying system configurations
+
   ---
 
 ## Tools used
@@ -46,7 +47,53 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
 ## Step by step process
 
-  
+- I started by logging into my Kali linux and on the terminal i used my root account by putting the command "sudo su"
+- I created the marketing group using the command "groupadd marketing"
+- I created 5 users with the following usernames
+  - alice_m
+  - bob_m
+  - carol_m
+  - david_m
+  - emma_m
+- Using the following commands
+  - useradd -m alice_m
+  - useradd -m bob_m
+  - useradd -m carol_m
+  - useradd -m david_m
+  - useradd -m emma_m
+
+ - Each of these users were assigned a password
+ - All the five users were added to the marketing group by executing the folowing commands
+   - usermod -aG marketing alice_m
+   - usermod -aG marketing bob_m
+   - usermod -aG marketing carol_m
+   - usermod -aG marketing david_m
+   - usermod -aG marketing emma_m
+ - I created a folder called  "shared/marketing" in my home directory using the command "mkdir -p /home/shared/marketing"
+ - For each user, i created a personal file 
+    - touch /home/shared/marketing/alice_report.txt
+    - touch /home/shared/marketing/bob_report.txt
+    - touch /home/shared/marketing/carol_report.txt
+    - touch /home/shared/marketing/david_report.txt
+    - touch /home/shared/marketing/emma_report.txt
+  - Each user the owner of the corresponding file by executing the following commands
+     -  chown alice_m /home/shared/marketing/alice_report.txt
+     -  chown bob_m /home/shared/marketing/bob_report.txt
+     -  chown carol_m /home/shared/marketing/carol_report.txt
+     -  chown david_m /home/shared/marketing/david_report.txt
+     -  chown emma_m /home/shared/marketing/emma_report.txt
+  - I had to set permissions to {700}: whereby
+    - Each user has read, write, and execute (rwx) permissions on their own file
+    - The group has no permissions (---) on the file
+    - Others have no permissions (---) on the file
+  - This was done by executing the following commands
+     - chmod 700 /home/shared/marketing/alice_report.txt
+     - chmod 700 /home/shared/marketing/bob_report.txt
+     - chmod 700 /home/shared/marketing/carol_report.txt
+     - chmod 700 /home/shared/marketing/david_report.txt
+     - chmod 700 /home/shared/marketing/emma_report.txt
+  - The expected permission output was
+    ##    -rwx-----  
 
 # 🔹 PART 2: IT Department (Shared Access)
 
