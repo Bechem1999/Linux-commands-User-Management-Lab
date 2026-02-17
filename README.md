@@ -61,11 +61,11 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
 ## Key Observations/ Lesson Learned
 
--700 allows access only to the file owner.
--770 allows access to both owner and group members.
--Group-based access control simplifies enterprise management.
--Proper permission management reduces unauthorized access risks.
--Linux enforces access control using owner, group, and others model.
+- 700 allows access only to the file owner.
+- 770 allows access to both owner and group members.
+- Group-based access control simplifies enterprise management.
+- Proper permission management reduces unauthorized access risks.
+- Linux enforces access control using owner, group, and others model.
 
 
 
