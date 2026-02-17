@@ -53,11 +53,11 @@ As a System Administrator at TechCorp Solutions, I was required to:
 ### Tasks Performed
 
 -Created itdept group
--Created 5 IT users
--Added users to group
--Created shared project file
--Assigned group ownership
--Applied 770 permissions 
+- Created 5 IT users
+- Added users to group
+- Created shared project file
+- Assigned group ownership
+- Applied 770 permissions 
 
 ## Key Observations/ Lesson Learned
 
