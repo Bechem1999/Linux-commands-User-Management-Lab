@@ -207,7 +207,7 @@ usermod -aG itdept henry_it
 usermod -aG itdept iris_it
 usermod -aG itdept jack_it
 
-mkdir -p /home/shared/it dept
+mkdir -p /home/shared/itdept
 touch /home/shared/itdept/project_specs.txt
 chown root:itdept /home/shared/itdept/project_specs.txt
 chmod 770 /home/shared/itdept/project_specs.txt
