@@ -94,7 +94,12 @@ As a System Administrator at TechCorp Solutions, I was required to:
      - chmod 700 /home/shared/marketing/emma_report.txt
   - The expected permission output was
     
-    ##    -rwx-----
+  ## rwx------1 alice_m root 0 Feb 16 06:15 alice_report.txt
+  ## rwx------1 bob_m   root 0 Feb 16 06:16 bob_report.txt
+  ## rwx------1 carol_m root 0 Feb 16 06:16 carol_report.txt
+  ## rwx------1 david_m root 0 Feb 16 06:17 david_report.txt
+  ## rwx------1 emma_m  root 0 Feb 16 06:17 emma_report.txt
+
       
   - I verified all of these configurations by executing the followinf commands
      - getent group marketing
