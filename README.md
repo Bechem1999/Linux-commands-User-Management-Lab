@@ -48,7 +48,7 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
   
 
-## PART 2: IT Department (Shared Access)
+# 🔹 PART 2: IT Department (Shared Access)
 Tasks Performed
 Created itdept group
 Created 5 IT users
