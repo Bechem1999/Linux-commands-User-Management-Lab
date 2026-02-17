@@ -83,9 +83,9 @@ As a System Administrator at TechCorp Solutions, I was required to:
      -  chown david_m /home/shared/marketing/david_report.txt
      -  chown emma_m /home/shared/marketing/emma_report.txt
   - I had to set permissions to {700}: whereby
-    - Each user has read, write, and execute (rwx) permissions on their own file
-    - The group has no permissions (---) on the file
-    - Others have no permissions (---) on the file
+    - Each user had a read, write, and execute (rwx) permissions on their own file
+    - The group had no permissions (---) on the file
+    - Others had no permissions (---) on the file
   - This was done by executing the following commands
      - chmod 700 /home/shared/marketing/alice_report.txt
      - chmod 700 /home/shared/marketing/bob_report.txt
@@ -93,7 +93,12 @@ As a System Administrator at TechCorp Solutions, I was required to:
      - chmod 700 /home/shared/marketing/david_report.txt
      - chmod 700 /home/shared/marketing/emma_report.txt
   - The expected permission output was
-    ##    -rwx-----  
+    
+    ##    -rwx-----
+      
+  - I verified all of these configurations by executing the followinf commands
+     - getent group marketing
+     - ls -l /home/shared/marketing
 
 # 🔹 PART 2: IT Department (Shared Access)
 
@@ -105,6 +110,51 @@ As a System Administrator at TechCorp Solutions, I was required to:
 - Created shared project file
 - Assigned group ownership
 - Applied 770 permissions 
+
+## Step by step process
+
+- I continued on my Kali linux and on the terminal 
+- I created the IT department group using the command "groupadd IT dept"
+- I created 5 users with the following usernames
+  - frank_it
+  - grace_it
+  - henry_it
+  - iris_it
+  - jack_it
+- Using the following commands
+  - useradd -m frank_it
+  - useradd -m grace_it
+  - useradd -m henry_it
+  - useradd -m iris_it
+  - useradd -m jack_it
+
+ - Each of these users were assigned a password
+ - All the five users were added to the IT dept group by executing the folowing commands
+   - usermod -aG itdept frank_it
+   - usermod -aG itdept grace_it
+   - usermod -aG itdept henry_it
+   - usermod -aG itdept iris_it
+   - usermod -aG itdept jack_it
+ - I created a folder called  "shared/it dept" in my home directory using the command "mkdir -p /home/shared/it dept"
+ - I created one shared file fo the group using the command
+    - touch /home/shared/itdept/project_specs.txt
+  - I had to Set ownership and permissions (700) so that:
+     - Change the ownership so the itdept group owns the file
+     - The group has read, write, and execute (rwx) permissions
+     - The owner has read, write, and execute (rwx) permissions
+     - Others have no permissions (---) on the file
+       
+  - This was done by executing the following commands
+     - chown root:itdept /home/shared/itdept/project_specs.txt
+     - chmod 770 /home/shared/itdept/project_specs.txt
+
+  - The expected permission output was
+    
+    ##    -rwxrwx--- 
+    
+  - I verified all of these configurations by executing the following commands
+     - getent group itdept
+     - ls -l /home/shared/itdept
 
 ## Key Observations/ Lesson Learned
 
@@ -138,6 +188,21 @@ touch /home/shared/marketing/*.txt
 chown user /home/shared/marketing/file
 chmod 700 /home/shared/marketing/*.txt
 
-Expected Permission Output
+groupadd IT dept
 
--rwx-----
+ useradd -m frank_it
+ useradd -m grace_it
+ useradd -m henry_it
+ useradd -m iris_it
+ useradd -m jack_it
+
+usermod -aG itdept frank_it
+usermod -aG itdept grace_it
+usermod -aG itdept henry_it
+usermod -aG itdept iris_it
+usermod -aG itdept jack_it
+
+mkdir -p /home/shared/it dept
+touch /home/shared/itdept/project_specs.txt
+chown root:itdept /home/shared/itdept/project_specs.txt
+chmod 770 /home/shared/itdept/project_specs.txt
