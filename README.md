@@ -20,10 +20,10 @@ The objective of this lab was to simulate real-world enterprise user management 
 
 ## Tools used
 
--Kali Linux
--Linux Terminal
--GitHub
--Virtual Machine (VMware)
+- Kali Linux
+- Linux Terminal
+- GitHub
+- Virtual Machine (VMware)
 
 ## Scenario Overview
 
