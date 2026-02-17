@@ -155,7 +155,7 @@ As a System Administrator at TechCorp Solutions, I was required to:
 
   - The expected permission output was
     
-    ##    -rwxrwx--- 
+   ## rwxrwx--- 1 root itdept 0 Feb 16 07:04 project_specs.txt 
     
   - I verified all of these configurations by executing the following commands
      - getent group itdept
